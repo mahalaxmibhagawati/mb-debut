@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Restoration</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Container for the form */
+        .container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2575fc;
+            font-weight: 700;
+        }
+
+        /* Upload Box */
+        .upload-box {
+            border: 2px dashed #2575fc;
+            padding: 2rem;
+            border-radius: 10px;
+            background: #f9f9f9;
+            cursor: pointer;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .upload-box:hover {
+            background: #e6f0ff;
+            border-color: #6a11cb;
+        }
+
+        .upload-box input[type="file"] {
+            display: none;
+        }
+
+        .upload-box label {
+            font-size: 1.1rem;
+            color: #2575fc;
+            cursor: pointer;
+            display: block;
+        }
+
+        .upload-box label:hover {
+            text-decoration: underline;
+        }
+
+        /* Upload Button */
+        button {
+            background: #2575fc;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #6a11cb;
+        }
+
+        /* Footer Text */
+        .footer {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .footer a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Restoration</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="upload-box">
+                <input type="file" name="file" id="file" accept="image/*" required>
+                <label for="file">Choose an image to upload</label>
+            </div>
+            <button type="submit">Upload and Restore</button>
+        </form>
+        <div class="footer">
+            <p>Restore your images with AI-powered technology.</p>
+        </div>
+    </div>
+</body>
+</html>

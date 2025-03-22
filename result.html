@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restored Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 1200px; /* Increased max-width for larger images */
+            width: 100%;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+            gap: 2rem; /* Added gap between images */
+        }
+        .image-container img {
+            max-width: 100%; /* Make images responsive */
+            width: 400px; /* Fixed width for larger images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restored Image</h1>
+        <div class="image-container">
+            <div>
+                <h2>Original Image</h2>
+                <img src="{{ url_for('send_uploaded_file', filename=original_image) }}" alt="Original Image">
+            </div>
+            <div>
+                <h2>Restored Image</h2>
+                <img src="{{ url_for('send_restored_file', filename=restored_image) }}" alt="Restored Image">
+            </div>
+        </div>
+        <a href="/">Upload Another Image</a>
+    </div>
+</body>
+</html>
